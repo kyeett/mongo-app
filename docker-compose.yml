@@ -6,7 +6,7 @@ services:
     environment:
       NODE_ENV: development
       FOO: bar
-      MONGO_URI: "mongodb://mongodb:27017"
+      MONGO_URI: "mongodb://localhost:27017"
     ports:
     - 3333:3333
     links:
@@ -14,7 +14,5 @@ services:
     depends_on:
       - mongodb
 
-  mongodb:
-    image: mongo:latest
-    expose:
-      - 27017
+networks:
+  mongo-app-backend:

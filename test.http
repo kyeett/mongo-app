@@ -1,0 +1,10 @@
+GET http://localhost:3333/data/customers/99
+Accept: application/json
+
+###
+
+### Send POST request with body as parameters
+POST http://localhost:3333/data/customers/99
+Content-Type: application/x-www-form-urlencoded
+
+customer_id=99&phone=0707998844&name=sungam
